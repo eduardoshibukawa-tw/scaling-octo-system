@@ -8,6 +8,15 @@ plugins {
 
 sonarqube {
 	properties {
+	}
+}
+
+
+sonarqube {
+	properties {
+		property "sonar.projectKey", "eduardoshibukawa-tw_scaling-octo-system"
+		property "sonar.organization", "eduardoshibukawa-tw"
+		property "sonar.host.url", "https://sonarcloud.io"
 		property "sonar.exclusions", "**/*Generated.java"
 	}
 }
