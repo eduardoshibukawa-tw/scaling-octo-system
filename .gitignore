@@ -26,7 +26,6 @@
 
 # Gradle
 .gradle
-gradle
 .idea/**/gradle.xml
 .idea/**/libraries
 
@@ -105,5 +104,4 @@ fabric.properties
 hs_err_pid*
 
 ## Jacoco
-
 build
