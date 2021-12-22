@@ -23,7 +23,7 @@ jobs:
       - run: ./gradlew test
       - run:
           name: Analyze on SonarCloud
-          command: ./gradlew build sonarqube
+          command: ./gradlew build jacocoTestReport sonarqube
 workflows:
   main:
     jobs:
