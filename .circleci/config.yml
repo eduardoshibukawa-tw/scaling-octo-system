@@ -20,12 +20,17 @@ jobs:
           paths:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
-      - run: ./gradlew test
+      - run: ./gradlew build jacocoTestReport
       - run:
           name: Analyze on SonarCloud
-          command: ./gradlew build jacocoTestReport sonarqube
+          command: ./gradlew sonarqube
+      - run:
+          name: Analyze on Codacy
+          command: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Java $(find **/jacoco*.xml -printf '-r %p ')
 workflows:
   main:
     jobs:
       - build:
-          context: SonarCloud
+          context:
+            - SonarCloud
+            - Codacy

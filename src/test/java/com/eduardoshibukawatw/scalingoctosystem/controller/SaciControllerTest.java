@@ -10,7 +10,9 @@ class SaciControllerTest {
     public void shouldGetSaci() {
         SaciController saciController = new SaciController();
 
-        assertEquals("Saci", saciController.getSaci());
+        String result = saciController.getSaci();
+
+        assertEquals("Saci", result);
     }
 
 }
