@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SaciControllerTest {
 
     @Test
-    public void shouldGetSaci() {
+    void shouldGetSaci() {
         SaciController saciController = new SaciController();
 
         String result = saciController.getSaci();
